@@ -3,9 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
     <title>Tabifit</title>
 </head>
 <body>
+    <!--Pantalla Inicial-->
+    <tabifit-pantalla id="pantalla-inicial">
+    <tabifit-botonfuncional></tabifit-botonfuncional>
+        <img src="imagenes/logoInicialGrande.png" alt="Logo App">
+    </tabifit-pantalla>
+
+    <!--Pantalla Series-->
+    <tabifit-pantalla id="pantalla-series"></tabifit-pantalla>
+        <tabifit-botonesnavegacion></tabifit-botonesnavegacion>
+
+    <!--Pantalla Vueltas-->
+    <tabifit-pantalla id="pantalla-vueltas"></tabifit-pantalla>
+
+    <!--Pantalla Ejercicios-->
+    <tabifit-pantalla id="pantalla-vueltas"></tabifit-pantalla>
+
+    <!--Pantalla Cuenta Regresiva Inicial-->
+    <tabifit-pantalla id="pantalla-cuentaregresivainicial"></tabifit-pantalla>
+
+    <!--Pantalla Cuenta Regresiva y Contador Series Vueltas-->
+    <tabifit-pantalla id="pantalla-resumen"></tabifit-pantalla>
+
+    <!--Pantalla Contador de Relax-->
+    <tabifit-pantalla id="pantalla-contadorrelax"></tabifit-pantalla>
+
+    <!--Pantalla Cuenta Regresiva 4-->
+    <tabifit-pantalla id="pantalla-resumen4"></tabifit-pantalla>
+
+    <!--Pantalla Fin Ejercicio Actual-->
+    <tabifit-pantalla id="pantalla-finejercicioactual">
+        <img src="imagenes/logoInicialGrande.png" alt="Logo App">
+    </tabifit-pantalla>
+
+    <!--Pantalla Repetir Sesión-->
+    <tabifit-pantalla id="pantalla-repetirsesion"></tabifit-pantalla>
+
+    <!--Pantalla Contador de Relax 2-->
+    <tabifit-pantalla id="pantalla-contadorrelax2"></tabifit-pantalla>
+
+    <!--Pantalla Resumen Sesión a Repetir-->
+    <tabifit-pantalla id="pantalla-resumensesionrepetir"></tabifit-pantalla>
+
+    <!--Pantalla Cuenta Regresiva Preparate-->
+    <tabifit-pantalla id="pantalla-preparate"></tabifit-pantalla>
+
+    <!--Pantalla Vamos-->
+    <tabifit-pantalla id="pantalla-vamos"></tabifit-pantalla>
+
+
+                        <!--Templates-->
+
+                        
+    <template id="tabifit-pantalla">
+        <slot></slot>
+        <link rel="stylesheet" href="tabifit-pantalla/tabifit-pantalla.css">
+    </template>
+
+    <template id="tabifit-botonesnavegacion">
+        <slot></slot>
+        <div class="botonesnavegacion">
+            <button><img src="imagenes/flechaBlanca.png" alt=""> </button>
+            <button><img src="imagenes/flechaBlanca.png" alt=""></button>
+        </div>
+        <link rel="stylesheet" href="tabifit-botonesnavegacion/tabifit-botonesnavegacion.css">
+    </template>
+
+    <template id="tabifit-botonfuncional">
+        <button><slot>Botón Funcional</slot></button>
+        <link rel="stylesheet" href="tabifit-botonfuncional/tabifit-botonfuncional.css">  
+    </template>
+
+    <template id="tabifit-contador">
+        <div class="contador">
+            <button class="restar">-</button>
+            <input type="number" min="1" max="10" value="6" name=contador id=contador></input>
+            <button class="sumar">+</button>
+        </div>
+        <link rel="stylesheet" href="tabifit-contador/tabifit-contador.css">
+    </template>
+
+    <template id="tabifit-contadorgira">
+        <link rel="stylesheet" href="tabifit-contadorgira/tabifit-contadorgira.css">
+    </template>
+
+    <template id="tabifit-contadorseriesyvueltas">
+        <link rel="stylesheet" href="tabifit-contadorseriesyvueltas/tabifit-contadorseriesyvueltas.css">
+    </template>
+
+    <template id="tabifit-contadortitila">
+        <link rel="stylesheet" href="tabifit-contadortitila/tabifit-contadortitila.css">
+    </template>
+
+    <template id="tabifit-listaejercicios">
+        <form>
+            <div class= "lista-ejercicios"></div>
+                <input type="radio" name=abdominales id="ejercicio-abdominales">
+                <label for="ejercicio-abdominales">Abdominales</label>
+                <input type="radio" name=sentadillas id="ejercicio-sentadillas">
+                <label for="ejercicio-sentadillas">Sentadillas</label>
+                <input type="radio" name=flexiones id="ejercicio-flexiones">
+                <label for="ejercicio-sentadillas">Flexiones</label>
+            </div>
+        </form> 
+        <link rel="stylesheet" href="tabifit-listaejercicios/tabifit-listaejercicios.css">
+    </template>
+
+    <template id="tabifit-titulogrande">
+        <h1 class="palabraizquierda"><slot>Palabra Izquierda</slot></h1><span></span>
+        <h1 class="palabracentro"><slot>Palabra Centro</slot></h1><span></span>
+        <h1 class="palabraderecha"><slot>Palabra Derecha</slot></h1>
+        <link rel="stylesheet" href="tabifit-titulogrande/tabifit-titulogrande.css">
+    </template>
+
+    <template id="tabifit-titulomedianoinferior">
+        <h2><slot></slot></h2>
+        <link rel="stylesheet" href="tabifit-titulomedianoinferior/tabifit-titulomedianoinferior.css">
+    </template>
+
+    <template id="tabifit-titulomedianosuperior">
+        <h2><slot></slot></h2>
+        <link rel="stylesheet" href="tabifit-titulomedianosuperior/tabifit-titulomedianosuperior.css">
+    </template>
     
+    <script src="utilidades.js"></script>
+    <script src="tabifit-botonesnavegacion/tabifit-botonesnavegacion.tabifit-botonesnavegacion.js"></script>
+    <script src="tabifit-botonfuncional/tabifit-botonfuncional.js"></script>
+    <script src="tabifit-contador/tabifit-contador.js"></script>
+    <script src="tabifit-contadorgira/tabifit-contadorgira.js"></script>
+    <script src="tabifit-contadorseriesyvueltas/tabifit-contadorseriesyvueltas.js"></script>
+    <script src="tabifit-contadortitila/tabifit-contadortitila.js"></script>
+    <script src="tabifit-listaejercicios/tabifit-listaejercicios.js"></script>
+    <script src="tabifit-pantalla/tabifit-pantalla.js"></script>
+    <script src="tabifit-titulogrande/tabifit-titulogrande.js"></script>
+    <script src="tabifit-titulomedianoinferior/tabifit-titulomedianoinferior.js"></script>
+    <script src="tabifit-titulomedianosuperior/tabifit-titulomedianosuperior.js"></script>
+
 </body>
 </html>
