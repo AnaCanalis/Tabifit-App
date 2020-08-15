@@ -1,0 +1,13 @@
+*{
+    box-sizing: border-box;
+}
+
+.html {
+    width: 375px;
+    height: 812px;
+    background-color: #00C9FF73;
+}
+
+.button {
+    background-color: #4AB4DC;
+}
