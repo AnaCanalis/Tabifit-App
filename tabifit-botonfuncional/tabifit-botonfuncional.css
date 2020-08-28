@@ -7,13 +7,12 @@ button {
     color: #FFFFFF;
     text-align: center;
     border-radius: 25px;
-    opacity: 1;
 }
 
-.celeste { 
+.celeste {
     background-color: #4AB4DC;
-    border-color: #4AB4DC;
 }
+
 .azul {
     background-color: #0B5D7C;
     border-color: #0B5D7C;
@@ -21,4 +20,8 @@ button {
 
 .transparente {
     opacity: 0;
+}
+
+:hover{
+    background-color: #0B5D7C;
 }

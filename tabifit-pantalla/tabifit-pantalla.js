@@ -6,3 +6,5 @@ class Pantalla extends HTMLElement {
     }
     
      customElements.define ("tabifit-pantalla", Pantalla);
+
+  

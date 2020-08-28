@@ -8,7 +8,16 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Roboto', sans-serif;
-    
+    width: 375px;
+    height: 812px;
     background-color: #00C9FF73;
+    --turquesa: #00C9FF;
+    --celeste: #4AB4DC;
+    --azul: #0B5D7C;
+    --blanco: #FFFFFF;
 }
+
+
+
+
 

@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Tabifit</title>
 </head>
 <body>
     <!--Pantalla Inicial-->
     <tabifit-pantalla id="pantalla-inicial">
         <img src="imagenes/logoInicialGrande.png" alt="Logo App">
-        <tabifit-botonfuncional class="celeste">COMENZAR</tabifit-botonfuncional>
-        <tabifit-botonfuncional class="celeste">REPETIR SESIÓN</tabifit-botonfuncional>
+        <tabifit-botonfuncional tipo="celeste">COMENZAR</tabifit-botonfuncional>
+        <tabifit-botonfuncional tipo="celeste">REPETIR SESIÓN</tabifit-botonfuncional>
     </tabifit-pantalla>
 
     <!--Pantalla Series-->
@@ -43,32 +44,34 @@
             <h1 class="palabracentro">ejercicios</h1><span></span>
             <h1 class="palabraderecha">vas a hacer?</h1>
         </tabifit-titulogrande>
-        <tabifit-contador></tabifit-contador>
+        <tabifit-listaejercicios></tabifit-listaejercicios>
         <tabifit-botonesnavegacion></tabifit-botonesnavegacion>
     </tabifit-pantalla>
 
     <!--Pantalla Cuenta Regresiva Inicial-->
     <tabifit-pantalla id="pantalla-cuentaregresivainicial">
-        <tabifit-titulomedianosuperior></tabifit-titulomedianosuperior>
-        <tabifit-contador></tabifit-contador>
-        <tabifit-botonesnavegacion></tabifit-botonesnavegacion>
+        <tabifit-titulomedianosuperior>comienza en</tabifit-titulomedianosuperior>
+        <tabifit-contadorgira>10</tabifit-contadorgira>
     </tabifit-pantalla>
 
     <!--Pantalla Cuenta Regresiva y Contador Series Vueltas-->
     <tabifit-pantalla id="pantalla-resumen">
-        <tabifit-listaejercicios></tabifit-listaejercicios>
-        <tabifit-botonesnavegacion></tabifit-botonesnavegacion>
+        <tabifit-contadorseriesyvueltas></tabifit-contadorseriesyvueltas>
+        <tabifit-contadorgira>10</tabifit-contadorgira>
+        <tabifit-titulomedianoinferior>Abs.</tabifit-titulomedianoinferior>
     </tabifit-pantalla>
 
     <!--Pantalla Contador de Relax-->
     <tabifit-pantalla id="pantalla-contadorrelax">
-        <tabifit-titulomedianosuperior>Relax</tabifit-titulomedianosuperior>
+        <tabifit-titulomedianosuperior>relax</tabifit-titulomedianosuperior>
+        <tabifit-contadortitila>10</tabifit-contadortitila>
     </tabifit-pantalla>
 
     <!--Pantalla Cuenta Regresiva 4-->
     <tabifit-pantalla id="pantalla-resumen4">
         <tabifit-contadorseriesyvueltas></tabifit-contadorseriesyvueltas>
-        <tabifit-titulomedianoinferior>Flex</tabifit-titulomedianoinferior>
+        <tabifit-contadorgira>15</tabifit-contadorgira>
+        <tabifit-titulomedianoinferior>Flex.</tabifit-titulomedianoinferior>
     </tabifit-pantalla>
 
     <!--Pantalla Fin Ejercicio Actual-->
@@ -92,18 +95,27 @@
 
     <!--Pantalla Resumen Sesión a Repetir FAAALTAAAAAA-->
     <tabifit-pantalla id="pantalla-resumensesionrepetir">
-        <tabifit-titulogrande></tabifit-titulogrande>
+        <tabifit-titulogrande>
+            <h1 class="palabraizquierda">Esta es la</h1><span></span>
+            <h1 class="palabracentro">sesión</h1><span></span>
+            <h1 class="palabraderecha">a repetir</h1>
+        </tabifit-titulogrande>
+        <tabifit-datosesion>Series</tabifit-datosesion>
+        <tabifit-datosesion>Vueltas</tabifit-datosesion>
+        <tabifit-ejerciciosguardados>Ejercicios</tabifit-ejerciciosguardados>
         <tabifit-botonesnavegacion></tabifit-botonesnavegacion>
     </tabifit-pantalla>
 
     <!--Pantalla Cuenta Regresiva Preparate-->
     <tabifit-pantalla id="pantalla-preparate">
-        <tabifit-titulomedianosuperior>¡Preparate!</tabifit-titulomedianosuperior>
+        <tabifit-titulomedianosuperior>¡preparate!</tabifit-titulomedianosuperior>
+        <tabifit-contadorgira>03</tabifit-contadorgira>
     </tabifit-pantalla>
 
     <!--Pantalla Vamos-->
     <tabifit-pantalla id="pantalla-vamos">
-        <tabifit-titulomedianoinferior>¡Vamos!</tabifit-titulomedianoinferior>
+        <tabifit-titulomedianoinferior>¡vamos!</tabifit-titulomedianoinferior>
+        <tabifit-contadorgira>00</tabifit-contadorgira>
     </tabifit-pantalla>
 
 
@@ -138,6 +150,10 @@
     </template>
 
     <template id="tabifit-contadorgira">
+        <div class="cuenta-regresiva">
+            10
+          </div>
+          <div class="borde-giratorio"></div><slot></slot>
         <link rel="stylesheet" href="tabifit-contadorgira/tabifit-contadorgira.css">
     </template>
 
@@ -179,9 +195,20 @@
         <h2><slot></slot></h2>
         <link rel="stylesheet" href="tabifit-titulomedianosuperior/tabifit-titulomedianosuperior.css">
     </template>
+
+    <template id="tabifit-datosesion">
+        <h2><slot></slot></h2>
+        <div></div>
+        <link rel="stylesheet" href="tabifit-datosesion/tabifit-datosesion.css">
+    </template>
+
+    <template id="tabifit-ejerciciosguardados">
+    <h2><slot></slot></h2>
+    <p>Abs, sentadillas, flex</p>
+    </template>
     
     <script src="utilidades.js"></script>
-    <script src="tabifit-botonesnavegacion/tabifit-botonesnavegacion.tabifit-botonesnavegacion.js"></script>
+    <script src="tabifit-botonesnavegacion/tabifit-botonesnavegacion.js"></script>
     <script src="tabifit-botonfuncional/tabifit-botonfuncional.js"></script>
     <script src="tabifit-contador/tabifit-contador.js"></script>
     <script src="tabifit-contadorgira/tabifit-contadorgira.js"></script>
@@ -192,6 +219,7 @@
     <script src="tabifit-titulogrande/tabifit-titulogrande.js"></script>
     <script src="tabifit-titulomedianoinferior/tabifit-titulomedianoinferior.js"></script>
     <script src="tabifit-titulomedianosuperior/tabifit-titulomedianosuperior.js"></script>
+    <script src="tabifit-datosesion/tabifit-datosesion.js"></script>
 
 </body>
 </html>

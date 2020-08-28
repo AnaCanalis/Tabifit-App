@@ -1,14 +1,17 @@
 h1{
     font-family:'Roboto', 'regular', sans-serif;
+    letter-spacing: 0px;
+    opacity: 1;
 }
 
 .palabraizquierda.palabraderecha{
     font-size: 31px;
     color: #000000;
+    text-align: left;
 }
 
 .palabracentro{
     color: #4AB4DC;
     font-size: 108px;
-    text-align: center;
+    text-align: left;
 }
