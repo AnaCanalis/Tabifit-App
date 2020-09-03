@@ -2,48 +2,17 @@
     box-sizing: border-box;
 }
 
-.html {
+:host {
+    width: 375px;
+    height: 812px;
+    background-color: #00C9FF73;
+    margin: 25px;
+}
+
+
+/*.html {
     width: 375px;
     height: 812px;
     background-color: #00C9FF73;
 }
-
-#pantalla-inicial{
-    display: flex;
-}
-#pantalla-series{
-    display: none;
-}
-#pantalla-vueltas{
-    display: none;
-}
-#pantalla-ejercicios{
-    display: none;
-}
-#pantalla-cuentaregresivainicial{
-    display: none;
-}
-#pantalla-resumen{
-    display: none;
-}
-#pantalla-contadorrelax{
-    display: none;
-}
-#pantalla-resumen4{
-    display: none;
-}
-#pantalla-finejercicioactual{
-    display: none;
-}
-#pantalla-repetirsesion{
-    display: none;
-}
-#pantalla-resumensesionrepetir{
-    display: none;
-}
-#pantalla-preparate{
-    display: none;
-}
-#pantalla-vamos{
-    display: none;
-}
+*/
