@@ -2,13 +2,13 @@
     box-sizing: border-box;
 }
 
-/*html, body {
+html, body {
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
   }
-  */
+
 
 body {
     display: flex;
@@ -23,13 +23,32 @@ body {
     --negro: black;
 }
 
-/*#pantalla-inicial{
-    display: flex;
+
+#pantalla-series, #pantalla-vueltas, #pantalla-ejercicios, #pantalla-contadorrelax, #pantalla-repetirsesion, #pantalla-resumensesionarepetir, #pantalla-preprate {
+    background-color: var(--blanco);
+
 }
+
+#pantalla-cuentaregresivainicial, #pantalla-finejercicioactual, #pantalla-vamos{
+    background-color: var(--turquesa);
+}
+
+#pantalla-inicial, #pantalla-series, #pantalla-vueltas, #pantalla-ejercicios, #pantalla-contadorrelax, #pantalla-repetirsesion, #pantalla-resumensesionarepetir, #pantalla-preprate, #pantalla-cuentaregresivainicial, #pantalla-finejercicioactual, #pantalla-vamos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pantalla-inicial{
+    display: flex;
+    background-color: #00C9FF73;
+    flex-wrap: wrap;
+}
+
 #pantalla-series{
     display: flex;
 }
-#pantalla-vueltas{
+/*#pantalla-vueltas{
     display: none;
 }
 #pantalla-ejercicios{
@@ -62,10 +81,28 @@ body {
 #pantalla-vamos{
     display: none;
 }
+*/
 
+/*Título Grande*/
 
+.palabraizquierda, .palabraderecha{
+    font-size: 31px;
+    color: var(--negro);
+    text-align: left;
+}
 
+.palabracentro{
+    font-size: 108px;
+    color: var(--celeste);
+    text-align: left;
+}
 
+.logo {
+    width: 375px;
+    height: 375px;
+}
 
-
+.contador-preparate{
+    color: var(--turquesa);
+}
 

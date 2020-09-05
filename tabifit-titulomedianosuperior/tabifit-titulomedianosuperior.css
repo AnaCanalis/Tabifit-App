@@ -3,6 +3,6 @@ h2 {
     font-size: 60px;
     text-align: left;
     letter-spacing: -5.1px;
-    color: #00C9FF;
+    color: var(--turquesa);
     opacity: 1;
 }

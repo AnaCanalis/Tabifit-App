@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <title>Tabifit</title>
 </head>
 <body>
     <!--Pantalla Inicial-->
     <tabifit-pantalla id="pantalla-inicial">
-        <img src="imagenes/logoInicialGrande.png" alt="Logo App">
-        <tabifit-botonfuncional tipo="celeste">COMENZAR</tabifit-botonfuncional>
-        <tabifit-botonfuncional tipo="celeste">REPETIR SESIÓN</tabifit-botonfuncional>
+        <img src="imagenes/logoInicialGrande.png" class="logo" alt="Logo App">
+        <tabifit-botonfuncional class="celeste">COMENZAR</tabifit-botonfuncional>
+        <tabifit-botonfuncional class="celeste">REPETIR SESIÓN</tabifit-botonfuncional>
     </tabifit-pantalla>
 
     <!--Pantalla Series-->
@@ -50,34 +51,42 @@
 
     <!--Pantalla Cuenta Regresiva Inicial-->
     <tabifit-pantalla id="pantalla-cuentaregresivainicial">
-        <tabifit-titulomedianosuperior>comienza en</tabifit-titulomedianosuperior>
-        <tabifit-contadorgira>10</tabifit-contadorgira>
+        <tabifit-titulomedianosuperior class="mediano-blanco">comienza en</tabifit-titulomedianosuperior>
+        <tabifit-contadorgira>
+            <p>10</p>
+        </tabifit-contadorgira>
     </tabifit-pantalla>
 
     <!--Pantalla Cuenta Regresiva y Contador Series Vueltas-->
     <tabifit-pantalla id="pantalla-resumen">
         <tabifit-contadorseriesyvueltas></tabifit-contadorseriesyvueltas>
-        <tabifit-contadorgira>10</tabifit-contadorgira>
+        <tabifit-contadorgira>
+            <p>10</p>
+        </tabifit-contadorgira>
         <tabifit-titulomedianoinferior>Abs.</tabifit-titulomedianoinferior>
     </tabifit-pantalla>
 
     <!--Pantalla Contador de Relax-->
     <tabifit-pantalla id="pantalla-contadorrelax">
         <tabifit-titulomedianosuperior>relax</tabifit-titulomedianosuperior>
-        <tabifit-contadortitila>10</tabifit-contadortitila>
+        <tabifit-contadortitila>
+            <p>10</p>
+        </tabifit-contadortitila>
     </tabifit-pantalla>
 
     <!--Pantalla Cuenta Regresiva 4-->
     <tabifit-pantalla id="pantalla-resumen4">
         <tabifit-contadorseriesyvueltas></tabifit-contadorseriesyvueltas>
-        <tabifit-contadorgira>15</tabifit-contadorgira>
+        <tabifit-contadorgira>
+            <p>15</p>
+        </tabifit-contadorgira>
         <tabifit-titulomedianoinferior>Flex.</tabifit-titulomedianoinferior>
     </tabifit-pantalla>
 
     <!--Pantalla Fin Ejercicio Actual-->
     <tabifit-pantalla id="pantalla-finejercicioactual">
-        <tabifit-titulomedianosuperior>¡LISTO!</tabifit-titulomedianosuperior>
-        <img src="imagenes/logoInicialGrande.png" alt="Logo App">
+        <tabifit-titulomedianosuperior class="mediano-blanco">¡LISTO!</tabifit-titulomedianosuperior>
+        <img src="imagenes/logoInicialGrande.png" class="logo" alt="Logo App">
         <tabifit-botonfuncional class="azul">GUARDAR ACTIVIDAD</tabifit-botonfuncional>
         <tabifit-botonfuncional class="transparente">SALIR</tabifit-botonfuncional>
     </tabifit-pantalla>
@@ -109,13 +118,17 @@
     <!--Pantalla Cuenta Regresiva Preparate-->
     <tabifit-pantalla id="pantalla-preparate">
         <tabifit-titulomedianosuperior>¡preparate!</tabifit-titulomedianosuperior>
-        <tabifit-contadorgira>03</tabifit-contadorgira>
+        <tabifit-contadorgira>
+            <p class="contador-preparate">03</p>
+        </tabifit-contadorgira>
     </tabifit-pantalla>
 
     <!--Pantalla Vamos-->
     <tabifit-pantalla id="pantalla-vamos">
         <tabifit-titulomedianoinferior>¡vamos!</tabifit-titulomedianoinferior>
-        <tabifit-contadorgira>00</tabifit-contadorgira>
+        <tabifit-contadorgira>
+            <p>0</p>
+        </tabifit-contadorgira>
     </tabifit-pantalla>
 
 
@@ -128,10 +141,10 @@
     </template>
 
     <template id="tabifit-botonesnavegacion">
-      <slot></slot>
         <div class="botonesnavegacion">
-            <button><img src="imagenes/flechaBlanca.png" alt=""></slot></button>
-            <button><img src="imagenes/flechaBlanca.png" alt=""></button>
+            <button class="botonizquierdo"><img src="imagenes/flechaBlanca.png" class= "flechaceleste" alt=""></button>
+            <button class="botonderecho"><img src="imagenes/flechaBlanca.png" alt=""></button>
+        </div>
         <link rel="stylesheet" href="tabifit-botonesnavegacion/tabifit-botonesnavegacion.css">
     </template>
 
@@ -151,9 +164,9 @@
 
     <template id="tabifit-contadorgira">
         <div class="cuenta-regresiva">
-            10
-          </div>
-          <div class="borde-giratorio"></div><slot></slot>
+            <slot><p></p></slot>
+        </div>
+        <div class="borde-giratorio"></div><slot></slot>
         <link rel="stylesheet" href="tabifit-contadorgira/tabifit-contadorgira.css">
     </template>
 
@@ -162,6 +175,10 @@
     </template>
 
     <template id="tabifit-contadortitila">
+        <div class="contador-titila">
+            <slot><p></p></slot>
+        </div>
+        <div class="borde-titila"></div><slot></slot>
         <link rel="stylesheet" href="tabifit-contadortitila/tabifit-contadortitila.css">
     </template>
 
@@ -180,9 +197,11 @@
     </template>
 
     <template id="tabifit-titulogrande">
-        <h1 class="palabraizquierda"><slot></slot></h1><span></span>
-        <h1 class="palabracentro"><slot></slot></h1><span></span>
-        <h1 class="palabraderecha"><slot></slot></h1>
+        <div class="contenedortitulogrande"> 
+            <h1 class="palabraizquierda"><slot></slot></h1><span></span>
+            <h1 class="palabracentro"><slot></slot></h1><span></span>
+            <h1 class="palabraderecha"><slot></slot></h1>
+        </div>
         <link rel="stylesheet" href="tabifit-titulogrande/tabifit-titulogrande.css">
     </template>
 
