@@ -3,10 +3,10 @@
 }
 
 button {
-    display: block;
     width: 71px;
     height: 71px;
     border-radius: 50%;
+    margin: 45px;
 }
 
 img{
@@ -27,8 +27,16 @@ img{
 
 .botonderecho{
     background-color: var(--celeste);
+    border: 1px solid var(--celeste);
 }
 
 .flechaceleste{
-    filter: invert(0.4) sepia(1) hue-rotate(20deg) saturate(1000%);
+    filter: invert(0.4) sepia(1) hue-rotate(190deg) saturate(900%);
+}
+
+.botonesnavegacion{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: flex-end;
 }

@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+  } 
+
 h2 {
     font-family: 'Roboto', sans-serif;
     font-size: 98px;
@@ -5,4 +9,7 @@ h2 {
     letter-spacing: -8.33px;
     color: var(--blanco);
     opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

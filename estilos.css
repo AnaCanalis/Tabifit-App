@@ -33,6 +33,10 @@ body {
     background-color: var(--turquesa);
 }
 
+#pantalla-resumen{
+    background-color: var(--azul);
+}
+
 #pantalla-inicial, #pantalla-series, #pantalla-vueltas, #pantalla-ejercicios, #pantalla-contadorrelax, #pantalla-repetirsesion, #pantalla-resumensesionarepetir, #pantalla-preprate, #pantalla-cuentaregresivainicial, #pantalla-finejercicioactual, #pantalla-vamos{
     display: flex;
     flex-direction: column;
@@ -83,8 +87,6 @@ body {
 }
 */
 
-/*Título Grande*/
-
 .palabraizquierda, .palabraderecha{
     font-size: 31px;
     color: var(--negro);
@@ -97,6 +99,11 @@ body {
     text-align: left;
 }
 
+.contenedortitulogrande{
+    background-color: red;
+}
+
+
 .logo {
     width: 375px;
     height: 375px;
@@ -106,3 +113,30 @@ body {
     color: var(--turquesa);
 }
 
+/*tabifit-contadorseriesyvueltas*/
+
+.contenedorseriesyvueltas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.subtitulo { 
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    text-align: left;
+    letter-spacing: 0px;
+    opacity: 1;
+    color: var(--turquesa);
+}
+
+.numeroserie, .numerovuelta {
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    text-align: left;
+    letter-spacing: 0px;
+    opacity: 1;
+    color: var(--blanco);
+    margin-top: -10px;
+}

@@ -3,6 +3,13 @@ h2 {
     font-size: 60px;
     text-align: left;
     letter-spacing: -5.1px;
-    color: var(--turquesa);
     opacity: 1;
+}
+
+.titulomedianoblanco{
+    color: var(--blanco);
+}
+
+.titulomedianoturquesa{
+    color: var(--turquesa);
 }

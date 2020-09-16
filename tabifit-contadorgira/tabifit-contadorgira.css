@@ -2,17 +2,15 @@
     box-sizing: border-box;
   } 
   
-  html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+  /*p {
+    margin: 0px;
+    padding: 0px;
     display: flex;
-    background: #6d8fff;
     justify-content: center;
     align-items: center;
   }
-  
+  */
+
   .cuenta-regresiva {
     font-size: 150px;
     font-family: 'Roboto', 'black' sans-serif;

@@ -12,8 +12,8 @@
     <!--Pantalla Inicial-->
     <tabifit-pantalla id="pantalla-inicial">
         <img src="imagenes/logoInicialGrande.png" class="logo" alt="Logo App">
-        <tabifit-botonfuncional class="celeste">COMENZAR</tabifit-botonfuncional>
-        <tabifit-botonfuncional class="celeste">REPETIR SESIÓN</tabifit-botonfuncional>
+        <tabifit-botonfuncional tipo="celeste">COMENZAR</tabifit-botonfuncional>
+        <tabifit-botonfuncional tipo="celeste">REPETIR SESIÓN</tabifit-botonfuncional>
     </tabifit-pantalla>
 
     <!--Pantalla Series-->
@@ -51,7 +51,7 @@
 
     <!--Pantalla Cuenta Regresiva Inicial-->
     <tabifit-pantalla id="pantalla-cuentaregresivainicial">
-        <tabifit-titulomedianosuperior class="mediano-blanco">comienza en</tabifit-titulomedianosuperior>
+        <tabifit-titulomedianosuperior tipo="titulomedianoblanco">comienza en</tabifit-titulomedianosuperior>
         <tabifit-contadorgira>
             <p>10</p>
         </tabifit-contadorgira>
@@ -59,36 +59,38 @@
 
     <!--Pantalla Cuenta Regresiva y Contador Series Vueltas-->
     <tabifit-pantalla id="pantalla-resumen">
-        <tabifit-contadorseriesyvueltas></tabifit-contadorseriesyvueltas>
+        <tabifit-contadorseriesyvueltas>
+            <div class="contenedorseriesyvueltas">
+                <div class="vueltasactuales">
+                    <p class="subtitulo">VUELTA</p>
+                    <p class="numerovuelta">1/2</p>
+                </div>
+                <div class="seriesactuales">
+                    <p class="subtitulo">SERIE</p>
+                    <p class="numeroserie">1/6</p>
+                </div>
+            </div>
+        </tabifit-contadorseriesyvueltas>
         <tabifit-contadorgira>
             <p>10</p>
         </tabifit-contadorgira>
-        <tabifit-titulomedianoinferior>Abs.</tabifit-titulomedianoinferior>
+        <tabifit-titulomedianoinferior class="titulomedianoinferior">Abs.</tabifit-titulomedianoinferior>
     </tabifit-pantalla>
 
     <!--Pantalla Contador de Relax-->
     <tabifit-pantalla id="pantalla-contadorrelax">
-        <tabifit-titulomedianosuperior>relax</tabifit-titulomedianosuperior>
+        <tabifit-titulomedianosuperior tipo="titulomedianoturquesa">relax</tabifit-titulomedianosuperior>
         <tabifit-contadortitila>
             <p>10</p>
         </tabifit-contadortitila>
     </tabifit-pantalla>
 
-    <!--Pantalla Cuenta Regresiva 4-->
-    <tabifit-pantalla id="pantalla-resumen4">
-        <tabifit-contadorseriesyvueltas></tabifit-contadorseriesyvueltas>
-        <tabifit-contadorgira>
-            <p>15</p>
-        </tabifit-contadorgira>
-        <tabifit-titulomedianoinferior>Flex.</tabifit-titulomedianoinferior>
-    </tabifit-pantalla>
-
     <!--Pantalla Fin Ejercicio Actual-->
     <tabifit-pantalla id="pantalla-finejercicioactual">
-        <tabifit-titulomedianosuperior class="mediano-blanco">¡LISTO!</tabifit-titulomedianosuperior>
+        <tabifit-titulomedianosuperior tipo="titulomedianoblanco">¡LISTO!</tabifit-titulomedianosuperior>
         <img src="imagenes/logoInicialGrande.png" class="logo" alt="Logo App">
-        <tabifit-botonfuncional class="azul">GUARDAR ACTIVIDAD</tabifit-botonfuncional>
-        <tabifit-botonfuncional class="transparente">SALIR</tabifit-botonfuncional>
+        <tabifit-botonfuncional tipo="azul">GUARDAR ACTIVIDAD</tabifit-botonfuncional>
+        <tabifit-botonfuncional tipo="transparente">SALIR</tabifit-botonfuncional>
     </tabifit-pantalla>
 
     <!--Pantalla Repetir Sesión-->
@@ -98,7 +100,7 @@
             <h1 class="palabracentro">sesión</h1><span></span>
             <h1 class="palabraderecha">a repetir</h1>
         </tabifit-titulogrande>
-        <tabifit-botonfuncional class="celeste">ABRIR DESDE ARCHIVO</tabifit-botonfuncional>
+        <tabifit-botonfuncional tipo="celeste">ABRIR DESDE ARCHIVO</tabifit-botonfuncional>
         <tabifit-botonesnavegacion></tabifit-botonesnavegacion>
     </tabifit-pantalla>
 
@@ -117,7 +119,7 @@
 
     <!--Pantalla Cuenta Regresiva Preparate-->
     <tabifit-pantalla id="pantalla-preparate">
-        <tabifit-titulomedianosuperior>¡preparate!</tabifit-titulomedianosuperior>
+        <tabifit-titulomedianosuperior tipo="titulomedianoturquesa">¡preparate!</tabifit-titulomedianosuperior>
         <tabifit-contadorgira>
             <p class="contador-preparate">03</p>
         </tabifit-contadorgira>
@@ -125,10 +127,10 @@
 
     <!--Pantalla Vamos-->
     <tabifit-pantalla id="pantalla-vamos">
-        <tabifit-titulomedianoinferior>¡vamos!</tabifit-titulomedianoinferior>
         <tabifit-contadorgira>
-            <p>0</p>
+            <p>00</p>
         </tabifit-contadorgira>
+        <tabifit-titulomedianoinferior>¡vamos!</tabifit-titulomedianoinferior>
     </tabifit-pantalla>
 
 
@@ -164,13 +166,23 @@
 
     <template id="tabifit-contadorgira">
         <div class="cuenta-regresiva">
-            <slot><p></p></slot>
+            <p><slot></slot></p>
         </div>
         <div class="borde-giratorio"></div><slot></slot>
         <link rel="stylesheet" href="tabifit-contadorgira/tabifit-contadorgira.css">
     </template>
 
     <template id="tabifit-contadorseriesyvueltas">
+        <div class= "contenedorseriesyvueltas">
+            <div class="vueltasactuales">
+                <p></p>
+                <p></p>
+            </div>
+            <div class="seriesactuales">
+                <p><slot></slot></p>
+                <p><slot></slot></p>
+            </div>
+        </div>
         <link rel="stylesheet" href="tabifit-contadorseriesyvueltas/tabifit-contadorseriesyvueltas.css">
     </template>
 
@@ -198,9 +210,9 @@
 
     <template id="tabifit-titulogrande">
         <div class="contenedortitulogrande"> 
-            <h1 class="palabraizquierda"><slot></slot></h1><span></span>
-            <h1 class="palabracentro"><slot></slot></h1><span></span>
-            <h1 class="palabraderecha"><slot></slot></h1>
+            <h1></h1><slot></slot></h1><span></span>
+            <h1><slot></slot></h1><span></span>
+            <h1><slot></slot></h1>
         </div>
         <link rel="stylesheet" href="tabifit-titulogrande/tabifit-titulogrande.css">
     </template>

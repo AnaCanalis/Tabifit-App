@@ -24,4 +24,14 @@ button{
 
 input{
     font-size: 160px;
+    width: 30%;
+    
+}
+
+.contador{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    
 }

@@ -11,15 +11,18 @@ button {
 }
 .celeste {
     background-color: var(--celeste);
+    border: none;
 }
 
 .azul {
     background-color: var(--azul);
-    border-color: var(--azul);
+    border: none;
 }
 
 .transparente {
-    opacity: 0;
+    background-color: var(--turquesa);
+    border-color: var(--azul);
+    
 }
 
 :hover{
