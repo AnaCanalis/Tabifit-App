@@ -1,8 +1,22 @@
-h1{
+slot{
     font-family:'Roboto', 'regular', sans-serif;
     letter-spacing: 0px;
     opacity: 1;
 }
 
+/*pasar selector por atributo */
 
+slot[name="palabraizquierda" ="palabraderecha"]{
+    font-size: 31px;
+    color: var(--negro);
+    text-align: left;
+    margin: 0px;
+}
+
+slot[name="palabracentro"]{
+    font-size: 108px;
+    color: var(--celeste);
+    text-align: left;
+    margin: 0px;
+}
 

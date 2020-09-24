@@ -1,25 +1,14 @@
 class TituloGrande extends HTMLElement {
-    constructor(){
-      super();
-      cargarTemplate("#tabifit-titulogrande", this);
-     }
-    }
-    
-     customElements.define ("tabifit-titulogrande", TituloGrande);
-
-     
- /* class TituloGrande extends HTMLElement {
   constructor(){
     super();
     cargarTemplate("#tabifit-titulogrande", this); 
-    this.tipoTituloGrande = this.getAttribute("tipo");   
+    this.slotTituloGrande = this.getAttribute("slot");   
   }
   connectedCallback(){
-    const elementoTituloGrande = this.shadowRoot.querySelector("h1");
-    elementoTituloGrande.className = this.tipoTituloGrande;
+    const elementoTituloGrande = this.shadowRoot.querySelector("p");
+    elementoTituloGrande.className = this.slotTituloGrande;
   }
   }
   
   customElements.define ("tabifit-titulogrande", TituloGrande);
   
-       

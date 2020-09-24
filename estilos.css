@@ -3,8 +3,6 @@
 }
 
 html, body {
-    width: 100%;
-    height: 100%;
     margin: 0;
     padding: 0;
   }
@@ -87,22 +85,6 @@ body {
 }
 */
 
-.palabraizquierda, .palabraderecha{
-    font-size: 31px;
-    color: var(--negro);
-    text-align: left;
-}
-
-.palabracentro{
-    font-size: 108px;
-    color: var(--celeste);
-    text-align: left;
-}
-
-.contenedortitulogrande{
-    background-color: red;
-}
-
 
 .logo {
     width: 375px;
@@ -140,3 +122,4 @@ body {
     color: var(--blanco);
     margin-top: -10px;
 }
+

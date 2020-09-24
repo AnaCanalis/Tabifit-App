@@ -5,7 +5,8 @@
 :host {
     width: 375px;
     height: 812px;
-    margin: 25px;
+    margin: 20px;
+    border: solid black;
 }
 
 

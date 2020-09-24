@@ -7,7 +7,7 @@ button {
     color: #FFFFFF;
     text-align: center;
     border-radius: 25px;
-    flex-wrap: wrap;
+    margin-top: 15px;
 }
 .celeste {
     background-color: var(--celeste);
