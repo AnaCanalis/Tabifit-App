@@ -5,7 +5,7 @@ class TituloGrande extends HTMLElement {
     this.slotTituloGrande = this.getAttribute("slot");   
   }
   connectedCallback(){
-    const elementoTituloGrande = this.shadowRoot.querySelector("p");
+    const elementoTituloGrande = this.shadowRoot.querySelectorAll("p");
     elementoTituloGrande.className = this.slotTituloGrande;
   }
   }

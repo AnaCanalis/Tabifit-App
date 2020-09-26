@@ -1,4 +1,12 @@
-h2 {
+*{
+    box-sizing: border-box;
+}
+
+div{
+    display: flex;
     color: var(--turquesa);
     font-size: 60px;
+    letter-spacing: -5.1px;
+    line-height: 72px;
+    text-align: left;
 }

@@ -12,16 +12,16 @@
     <!--Pantalla Inicial-->
     <tabifit-pantalla id="pantalla-inicial">
         <img src="imagenes/logoInicialGrande.png" class="logo" alt="Logo App">
-        <tabifit-botonfuncional tipo="celeste">COMENZAR</tabifit-botonfuncional>
+        <tabifit-botonfuncional class="boton-comenzar" tipo="celeste">COMENZAR</tabifit-botonfuncional>
         <tabifit-botonfuncional tipo="celeste">REPETIR SESIÓN</tabifit-botonfuncional>
     </tabifit-pantalla>
 
     <!--Pantalla Series-->
     <tabifit-pantalla id="pantalla-series">
         <tabifit-titulogrande>
-            <p slot="palabraizquierda">¿Cuántas</p>
-            <p slot="palabracentro">series</p>
-            <p slot="palabraderecha">vas a hacer?</p>
+            <div slot="palabraizquierda">¿Cuántas</div>
+            <div slot="palabracentro">series</div>
+            <div slot="palabraderecha">vas a hacer?</div>
         </tabifit-titulogrande>
         <tabifit-contador></tabifit-contador>
         <tabifit-botonesnavegacion></tabifit-botonesnavegacion>
@@ -30,9 +30,9 @@
     <!--Pantalla Vueltas-->
     <tabifit-pantalla id="pantalla-vueltas">
         <tabifit-titulogrande>
-            <p slot="palabraizquierda">¿Cuántas</p>
-            <p slot="palabracentro">vueltas</p>
-            <p slot="palabraderecha">vas a hacer?</p>
+            <div slot="palabraizquierda">¿Cuántas</div>
+            <div slot="palabracentro" class="palabra-vueltas">vueltas</div>
+            <div slot="palabraderecha">vas a hacer?</div>
         </tabifit-titulogrande>
         <tabifit-contador></tabifit-contador>
         <tabifit-botonesnavegacion></tabifit-botonesnavegacion>
@@ -41,18 +41,31 @@
     <!--Pantalla Ejercicios-->
     <tabifit-pantalla id="pantalla-ejercicios">
         <tabifit-titulogrande>
-            <p slot="palabraizquierda">¿Qué</p>
-            <p slot="palabracentro">ejercicios</p>
-            <p slot="palabraderecha">vas a hacer?</p>
+            <div slot="palabraizquierda">¿Qué</div>
+            <div slot="palabracentro" class="palabra-ejercicios">ejercicios</div>
+            <div slot="palabraderecha">vas a hacer?</div>
         </tabifit-titulogrande>
-        <tabifit-listaejercicios></tabifit-listaejercicios>
+        <tabifit-listaejercicios>
+            <form>
+                <div class="lista-ejercicios">
+                    <input type="checkbox" name=abdominales id="ejercicio-abdominales">
+                    <label for="ejercicio-abdominales">Abdominales</label>
+
+                    <input type="checkbox" name=sentadillas id="ejercicio-sentadillas">
+                    <label for="ejercicio-sentadillas">Sentadillas</label>
+
+                    <input type="checkbox" name=flexiones id="ejercicio-flexiones">
+                    <label for="ejercicio-flexiones">Flexiones</label>
+                </div>
+            </form>
+        </tabifit-listaejercicios>
         <tabifit-botonesnavegacion></tabifit-botonesnavegacion>
     </tabifit-pantalla>
 
     <!--Pantalla Cuenta Regresiva Inicial-->
     <tabifit-pantalla id="pantalla-cuentaregresivainicial">
         <tabifit-titulomedianosuperior tipo="titulomedianoblanco">comienza en</tabifit-titulomedianosuperior>
-        <tabifit-contadorgira>
+        <tabifit-contadorgira numeroInicial= "100">
             <p>10</p>
         </tabifit-contadorgira>
     </tabifit-pantalla>
@@ -71,8 +84,8 @@
                 </div>
             </div>
         </tabifit-contadorseriesyvueltas>
-        <tabifit-contadorgira>
-            <p>10</p>
+        <tabifit-contadorgira numeroInicial="20">
+            <p>20</p>
         </tabifit-contadorgira>
         <tabifit-titulomedianoinferior class="titulomedianoinferior">Abs.</tabifit-titulomedianoinferior>
     </tabifit-pantalla>
@@ -80,7 +93,7 @@
     <!--Pantalla Contador de Relax-->
     <tabifit-pantalla id="pantalla-contadorrelax">
         <tabifit-titulomedianosuperior tipo="titulomedianoturquesa">relax</tabifit-titulomedianosuperior>
-        <tabifit-contadortitila>
+        <tabifit-contadortitila valorPausaSerie="10" valorPausaVuelta="15">
             <p>10</p>
         </tabifit-contadortitila>
     </tabifit-pantalla>
@@ -96,9 +109,9 @@
     <!--Pantalla Repetir Sesión-->
     <tabifit-pantalla id="pantalla-repetirsesion">
         <tabifit-titulogrande>
-            <p slot="palabraizquierda">Elegí la</p>
-            <p slot="palabracentro">sesión</p>
-            <p slot="palabraderecha">a repetir</p>
+            <div slot="palabraizquierda">Elegí la</div>
+            <div slot="palabracentro">sesión</div>
+            <div slot="palabraderecha">a repetir</div>
         </tabifit-titulogrande>
         <tabifit-botonfuncional tipo="celeste">ABRIR DESDE ARCHIVO</tabifit-botonfuncional>
         <tabifit-botonesnavegacion></tabifit-botonesnavegacion>
@@ -107,12 +120,12 @@
     <!--Pantalla Resumen Sesión a Repetir FAAALTAAAAAA-->
     <tabifit-pantalla id="pantalla-resumensesionrepetir">
         <tabifit-titulogrande>
-            <p slot="palabraizquierda">Esta es la</p>
-            <p slot="palabracentro">sesión</p>
-            <p slot="palabraderecha">a repetir</p>
+            <div slot="palabraizquierda">Esta es la</div>
+            <div slot="palabracentro">sesión</div>
+            <div slot="palabraderecha">a repetir</div>
         </tabifit-titulogrande>
-        <tabifit-datosesion><h2>Series</h2></tabifit-datosesion>
-        <tabifit-datosesion><h2>Vueltas</h2></tabifit-datosesion>
+        <tabifit-datosesion><div>Series</div></tabifit-datosesion>
+        <tabifit-datosesion><div>Vueltas</div></tabifit-datosesion>
         <tabifit-ejerciciosguardados>
             <h2>Ejercicios</h2>
             <p>Abs, sentadillas, flex</p>
@@ -177,11 +190,11 @@
 
     <template id="tabifit-contadorseriesyvueltas">
         <div class= "contenedorseriesyvueltas">
-            <div class="vueltasactuales">
+            <div>
                 <p><slot></slot></p>
                 <p><slot></slot></p>
             </div>
-            <div class="seriesactuales">
+            <div>
                 <p><slot></slot></p>
                 <p><slot></slot></p>
             </div>
@@ -199,13 +212,15 @@
 
     <template id="tabifit-listaejercicios">
         <form>
-            <div class= "lista-ejercicios"></div>
-                <input type="checkbox" name=abdominales id="ejercicio-abdominales">
-                <label for="ejercicio-abdominales">Abdominales</label>
-                <input type="checkbox" name=sentadillas id="ejercicio-sentadillas">
-                <label for="ejercicio-sentadillas">Sentadillas</label>
-                <input type="checkbox" name=flexiones id="ejercicio-flexiones">
-                <label for="ejercicio-flexiones">Flexiones</label>
+            <div>
+                <slot>
+                    <input type="checkbox">
+                    <label></label>
+                    <input type="checkbox">
+                    <label></label>
+                    <input type="checkbox">
+                    <label></label>
+                </slot>
             </div>
         </form> 
         <link rel="stylesheet" href="tabifit-listaejercicios/tabifit-listaejercicios.css">
@@ -229,7 +244,7 @@
     </template>
 
     <template id="tabifit-datosesion">
-        <h2><slot></slot></h2>
+        <div><slot></slot></div>
         <div></div>
         <link rel="stylesheet" href="tabifit-datosesion/tabifit-datosesion.css">
     </template>
@@ -240,6 +255,7 @@
     </template>
     
     <script src="utilidades.js"></script>
+    <script src="script.js"></script>
     <script src="tabifit-botonesnavegacion/tabifit-botonesnavegacion.js"></script>
     <script src="tabifit-botonfuncional/tabifit-botonfuncional.js"></script>
     <script src="tabifit-contador/tabifit-contador.js"></script>

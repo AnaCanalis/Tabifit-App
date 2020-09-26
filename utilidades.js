@@ -4,3 +4,5 @@ function cargarTemplate(referenciaTemplate, instanciaComponente) {
     instanciaComponente.attachShadow({ mode: "open" })
       .appendChild(templateContent.cloneNode(true));
   }
+
+  

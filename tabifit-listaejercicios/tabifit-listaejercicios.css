@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+}
+
+
+/*<template id="tabifit-listaejercicios">
+        <form>
+            <div class= "lista-ejercicios"></div>
+                <input type="checkbox" name=abdominales id="ejercicio-abdominales">
+                <label for="ejercicio-abdominales">Abdominales</label>
+                <input type="checkbox" name=sentadillas id="ejercicio-sentadillas">
+                <label for="ejercicio-sentadillas">Sentadillas</label>
+                <input type="checkbox" name=flexiones id="ejercicio-flexiones">
+                <label for="ejercicio-flexiones">Flexiones</label>
+            </div>
+        </form> 
+        <link rel="stylesheet" href="tabifit-listaejercicios/tabifit-listaejercicios.css">
+    </template>px

@@ -6,12 +6,10 @@ button {
     width: 71px;
     height: 71px;
     border-radius: 50%;
-    margin: 45px;
+    margin: 75px;
 }
 
 img{
-    width: 21.59px;
-    height: 31.98px;
     top: 699px;
     left: 68px;
     width: 22px;
@@ -36,7 +34,6 @@ img{
 
 .botonesnavegacion{
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
+    flex-wrap: nowrap;
     align-items: flex-end;
 }
