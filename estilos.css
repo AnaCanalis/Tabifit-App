@@ -1,12 +1,8 @@
 *{
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
-
-html, body {
-    margin: 0;
-    padding: 0;
-  }
-
 
 body {
     display: flex;
@@ -21,6 +17,9 @@ body {
     --negro: black;
 }
 
+#pantalla-inicial{
+    background-color: #00C9FF73;
+}
 
 #pantalla-series, #pantalla-vueltas, #pantalla-ejercicios, #pantalla-contadorrelax, #pantalla-repetirsesion, #pantalla-resumensesionarepetir, #pantalla-preprate {
     background-color: var(--blanco);
@@ -35,56 +34,11 @@ body {
     background-color: var(--azul);
 }
 
-#pantalla-inicial, #pantalla-series, #pantalla-vueltas, #pantalla-ejercicios, #pantalla-contadorrelax, #pantalla-repetirsesion, #pantalla-resumensesionarepetir, #pantalla-preprate, #pantalla-cuentaregresivainicial, #pantalla-finejercicioactual, #pantalla-vamos{
+tabifit-pantalla {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
-#pantalla-inicial{
-    display: flex;
-    background-color: #00C9FF73;
-    flex-wrap: wrap;
-}
-
-#pantalla-series{
-    display: flex;
-}
-/*#pantalla-vueltas{
-    display: none;
-}
-#pantalla-ejercicios{
-    display: none;
-}
-#pantalla-cuentaregresivainicial{
-    display: none;
-}
-#pantalla-resumen{
-    display: none;
-}
-#pantalla-contadorrelax{
-    display: none;
-}
-#pantalla-resumen4{
-    display: none;
-}
-#pantalla-finejercicioactual{
-    display: none;
-}
-#pantalla-repetirsesion{
-    display: none;
-}
-#pantalla-resumensesionrepetir{
-    display: none;
-}
-#pantalla-preparate{
-    display: none;
-}
-#pantalla-vamos{
-    display: none;
-}
-*/
-
 
 .logo {
     width: 375px;
@@ -111,6 +65,7 @@ body {
     letter-spacing: 0px;
     opacity: 1;
     color: var(--turquesa);
+    margin: 40px;
 }
 
 .numeroserie, .numerovuelta {
@@ -120,6 +75,55 @@ body {
     letter-spacing: 0px;
     opacity: 1;
     color: var(--blanco);
-    margin-top: -10px;
+    margin-top: -40px;
+    margin-left: 50px;
 }
 
+/*Palabra mediana de título grande. "Ejercicio 85 píxeles"*/
+.palabra-ejercicios {
+    font-size: 85px;
+    letter-spacing: -7.22px;
+    text-align: left;
+}
+
+.palabra-vueltas {
+    letter-spacing: -9.18px;
+}
+
+/*Lista Ejercicios*/
+
+.lista-ejercicios{
+    display: flex;
+    font-size: 31px;
+    line-height: 37px;
+    text-align: left;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 100px;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+input[type="checkbox"] + label{
+    cursor: pointer;
+}
+
+label {
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    -moz-border-radius:50px;
+    -webkit-border-radius:50px;
+    background-color: #FFFFFF;
+    border: solid 1px var(--celeste);
+    margin-right: 20px;
+    display: inline-block;
+}
+
+
+input[type="checkbox"]:checked + label {
+    background-color: #53B8DE;
+    content: 
+}
