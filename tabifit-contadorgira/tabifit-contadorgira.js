@@ -9,7 +9,7 @@ class ContadorGira extends HTMLElement {
       this.shadowRoot.querySelector("span");
       this.shadowRoot.querySelector(".cuenta-regresiva");
       let contador = parseInt(this.getAttribute("numeroinicial"));
-      let cuentaRegresiva = this.shadowRoot.querySelector('.cuenta-regresiva');
+      let cuentaRegresiva = document.querySelector(".cuenta-regresiva");
       if(contador === 0){
         return;
       }
@@ -23,32 +23,3 @@ class ContadorGira extends HTMLElement {
     }
 }
   customElements.define ("tabifit-contadorgira", ContadorGira);
-    
-
-/*class ContadorGira extends HTMLElement {
-    constructor(){
-      super();
-      cargarTemplate("#tabifit-contadorgira", this);  
-    }
-    
-    connectedCallback () { 
-      this.shadowRoot.querySelector("span");
-      this.shadowRoot.querySelector(".cuenta-regresiva");
-      let contador = parseInt(this.getAttribute("numeroinicial"));
-      let cuentaRegresiva = this.shadowRoot.querySelector('.cuenta-regresiva');
-      if(contador === 0){
-        return;
-      }
-      let ciclo = setInterval (function(){
-      contador -=1;
-      cuentaRegresiva.innerHTML = contador;
-      if(contador === 0){
-      clearInterval(ciclo);
-      }
-}, 1000);
-    }
-     const 
-    
-  }
-    
-customElements.define ("tabifit-contadorgira", ContadorGira); */

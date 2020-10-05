@@ -16,40 +16,7 @@ class ContadorTitila extends HTMLElement {
       clearInterval(periodo);
       }
     }, 1000);
-     }
-     
-    }
+  }  
+}
   
-    
-
      customElements.define ("tabifit-contadortitila", ContadorTitila);
-
-     /*class ContadorTitila extends HTMLElement {
-      constructor(relaxVueltas){
-        super();
-        cargarTemplate("#tabifit-contadortitila", this);    
-       }
-       connectedCallback(){
-        this.shadowRoot.querySelector("span");
-        this.shadowRoot.querySelector(".contador-titila");
-       }
-
-      relaxVueltas(){
-        let numero = 10;
-        let cuentaAtras = document.querySelector('.contador-titila');
-        let periodo = setInterval (function(){
-        numero -=1;
-        cuentaAtras.innerHTML = numero;
-        if(numero === 0){
-          clearInterval(periodo);
-          }
-        }, 1000);
-      }
-       
-      }
-    
-  
-       customElements.define ("tabifit-contadortitila", ContadorTitila);*/
-
-
-    

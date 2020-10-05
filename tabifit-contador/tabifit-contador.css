@@ -1,12 +1,3 @@
-/*<template id="tabifit-contador">
-        <div class="contador">
-            <button class="restar">-</button>
-            <input type="number" min="1" max="10" value="6" name=contador id=contador></input>
-            <button class="sumar">+</button>
-        </div>
-        <link rel="stylesheet" href="tabifit-contador/tabifit-contador.css">
-    </template>*/
-
  button,input{
     color: var(--celeste);
     font-family: 'Roboto', sans-serif;
