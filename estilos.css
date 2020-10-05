@@ -1,7 +1,5 @@
 *{
     box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
 }
 
 body {
@@ -21,7 +19,7 @@ body {
     background-color: #00C9FF73;
 }
 
-#pantalla-series, #pantalla-vueltas, #pantalla-ejercicios, #pantalla-contadorrelax, #pantalla-repetirsesion, #pantalla-resumensesionarepetir, #pantalla-preprate {
+#pantalla-series, #pantalla-vueltas, #pantalla-ejercicios, #pantalla-contadorrelax, #pantalla-repetirsesion, #pantalla-resumensesionrepetir, #pantalla-preprate {
     background-color: var(--blanco);
 
 }
@@ -43,6 +41,8 @@ tabifit-pantalla {
 .logo {
     width: 375px;
     height: 375px;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
 }
 
 .contador-preparate{
@@ -118,12 +118,10 @@ label {
     -webkit-border-radius:50px;
     background-color: #FFFFFF;
     border: solid 1px var(--celeste);
-    margin-right: 20px;
+    padding-left: 50px;
     display: inline-block;
 }
 
-
 input[type="checkbox"]:checked + label {
     background-color: #53B8DE;
-    content: 
 }

@@ -13,7 +13,7 @@
     text-align: left;
     background: none;
     border: none;
-    padding: 0;
+    padding: 0px;
     cursor: pointer;
     outline: inherit;
 }
@@ -33,5 +33,5 @@ input{
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-around;
-    
+    margin-top: 100px;
 }

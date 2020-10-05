@@ -2,7 +2,7 @@
     box-sizing: border-box;
   } 
 
-h2 {
+slot {
     font-family: 'Roboto', sans-serif;
     font-size: 98px;
     text-align: left;

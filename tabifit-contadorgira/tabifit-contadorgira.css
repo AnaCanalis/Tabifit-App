@@ -2,43 +2,47 @@
     box-sizing: border-box;
   } 
   
-  /*p {
-    margin: 0px;
-    padding: 0px;
+  span {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  */
 
   .cuenta-regresiva {
     font-size: 150px;
     font-family: 'Roboto', 'black' sans-serif;
     font-weight: bold;
     color: var(--blanco);
+    margin-top: 7rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-  
+
   .borde-giratorio {
   
     left: 50%;
     top: 50%;
-    width: 15rem;
-    height: 15rem;
-    border: 5px solid #fff;
-    margin-left: -7.5rem;
-    margin-top: -7.5rem;
+    width: 20rem;
+    height: 20rem;
+    border: 5px solid var(--blanco);
+    margin-left: 0rem;
+    margin-top: -15.5rem;
     border-radius: 50%;
-    border-left-color: transparent;
     border-right-color: transparent;
     border-bottom-color: transparent;
     animation: 1s rotate infinite;
   }
+
+
   
   @keyframes rotate {
     0% {
       transform: rotate(0deg);
     }
     100% {
-      transform: rotate(359deg);
+      transform: rotate(360deg);
     }
   }

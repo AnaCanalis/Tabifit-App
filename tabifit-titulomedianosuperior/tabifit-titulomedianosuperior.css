@@ -1,4 +1,4 @@
-h2 {
+slot {
     font-family: 'Roboto', sans-serif;
     font-size: 60px;
     text-align: left;
@@ -8,8 +8,10 @@ h2 {
 
 .titulomedianoblanco{
     color: var(--blanco);
+    margin-top: 64px;
 }
 
 .titulomedianoturquesa{
     color: var(--turquesa);
+    margin-top: 64px;
 }

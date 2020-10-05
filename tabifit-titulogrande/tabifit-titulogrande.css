@@ -14,7 +14,7 @@ slot[name="palabraizquierda"],slot[name="palabraderecha"]{
     line-height: 37px;
     color: var(--negro);
     text-align: left;
-    margin: 0px;
+    margin-top: 0px;
 }
 
 slot[name="palabracentro"]{
@@ -22,7 +22,7 @@ slot[name="palabracentro"]{
     line-height: 70px;
     color: var(--celeste);
     text-align: left;
-    margin: 0px;
+    margin-top: 0px;
 }
 
 slot[name="palabraderecha"]{
@@ -31,5 +31,6 @@ slot[name="palabraderecha"]{
 
 slot[name="palabraizquierda"]{
     justify-content: flex-start;
+    margin-top:64px;
 }
 

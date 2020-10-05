@@ -16,6 +16,13 @@ img{
     height: 32px;
 }
 
+.botonesnavegacion{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    flex-direction: row;
+}
+
 .botonizquierdo {
     transform: scaleX(-1); 
     border: 1px solid var(--celeste);
@@ -32,8 +39,3 @@ img{
     filter: invert(0.4) sepia(1) hue-rotate(190deg) saturate(900%);
 }
 
-.botonesnavegacion{
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: flex-end;
-}
