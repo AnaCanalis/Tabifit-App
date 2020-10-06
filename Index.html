@@ -132,11 +132,17 @@
             <div slot="palabracentro">sesión</div>
             <div slot="palabraderecha">a repetir</div>
         </tabifit-titulogrande>
-        <tabifit-datosesion><div>Series</div></tabifit-datosesion>
-        <tabifit-datosesion><div>Vueltas</div></tabifit-datosesion>
+        <tabifit-datosesion>
+            <div>Series</div>
+            <div class= "textoderecha">6</div>
+        </tabifit-datosesion>
+        <tabifit-datosesion>
+            <div>Vueltas</div>
+            <div class="textoderecha">2</div>
+        </tabifit-datosesion>
         <tabifit-ejerciciosguardados>
-            <h2>Ejercicios</h2>
-            <p>Abs, sentadillas, flex</p>
+            <span class="subtituloejercicios">Ejercicios</span>
+            <p class="ejerciciosarepetir">Abs, sentadillas, flex</p>
         </tabifit-ejerciciosguardados>
         <tabifit-botonesnavegacion></tabifit-botonesnavegacion>
     </tabifit-pantalla>
@@ -264,7 +270,7 @@
     </template>
 
     <template id="tabifit-ejerciciosguardados">
-    <h2><slot></slot></h2>
+    <span><slot></slot></span>
     <p><slot></slot></p>
     </template>
     

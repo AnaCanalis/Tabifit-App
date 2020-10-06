@@ -9,7 +9,7 @@ class ContadorGira extends HTMLElement {
       this.shadowRoot.querySelector("span");
       this.shadowRoot.querySelector(".cuenta-regresiva");
       let contador = parseInt(this.getAttribute("numeroinicial"));
-      let cuentaRegresiva = document.querySelector(".cuenta-regresiva");
+      let cuentaRegresiva = this.shadowRoot.querySelector(".cuenta-regresiva");
       if(contador === 0){
         return;
       }

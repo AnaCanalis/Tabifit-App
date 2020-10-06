@@ -9,4 +9,5 @@ div{
     letter-spacing: -5.1px;
     line-height: 72px;
     text-align: left;
+    justify-content: flex-start;
 }
